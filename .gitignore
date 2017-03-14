@@ -2,9 +2,3 @@
 node_modules
 *.log
 coverage
-*.js
-.vscode
-typings
-*.d.ts
-*.js
-*.rdb

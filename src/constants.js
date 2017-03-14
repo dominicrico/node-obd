@@ -1,0 +1,23 @@
+var constants = {};
+
+var OBD_MESSAGE_TYPES = (function() {
+  function OBD_MESSAGE_TYPES() {}
+  OBD_MESSAGE_TYPES.CURRENT_DATA = '01';
+  OBD_MESSAGE_TYPES.REQUEST_DTC = '03';
+  OBD_MESSAGE_TYPES.CLEAR_DTC = '04';
+  OBD_MESSAGE_TYPES.VIN = '09';
+  return OBD_MESSAGE_TYPES;
+}());
+
+var OBD_OUTPUT_MESSAGE_TYPES = (function() {
+  function OBD_OUTPUT_MESSAGE_TYPES() {}
+  OBD_OUTPUT_MESSAGE_TYPES.MODE_01 = '41';
+  return OBD_OUTPUT_MESSAGE_TYPES;
+}());
+
+constants.OBD_MESSAGE_TYPES = OBD_MESSAGE_TYPES;
+constants.OBD_OUTPUT_MESSAGE_TYPES = OBD_OUTPUT_MESSAGE_TYPES;;
+constants.OBD_OUTPUT_DELIMETER = '>';
+constants.OBD_OUTPUT_EOL = '\r';
+
+module.exports = constants;
