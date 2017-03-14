@@ -1,9 +1,8 @@
 {
-  "name": "obd-parser",
+  "name": "node-obd",
   "version": "0.2.1",
   "description": "OBD interface that can send and receive messages over a given connection.",
-  "main": "lib/obd-interface.js",
-  "typings": "lib/obd-interface.d.ts",
+  "main": "src/obd.js",
   "dependencies": {
     "bluebird": "~3.2.2",
     "case": "~1.4.2",
@@ -12,30 +11,12 @@
     "verror": "~1.6.1"
   },
   "devDependencies": {
-    "@types/bluebird": "~3.0.35",
-    "@types/core-js": "~0.9.35",
-    "@types/debug": "0.0.29",
-    "@types/node": "~6.0.46",
-    "@types/ramda": "0.0.2",
-    "@types/verror": "~1.6.28",
-    "chai-as-promised": "~5.2.0",
-    "dts-gen": "~0.4.17",
-    "istanbul": "~0.4.2",
-    "linelint": "~1.0.1",
-    "mocha": "~2.4.5",
     "obd-parser-development-connection": "~0.1.0",
-    "obd-parser-serial-connection": "~0.1.1",
-    "proxyquire": "~1.7.4",
-    "sinon": "~1.17.3",
-    "typescript": "~2.0.10"
+    "obd-parser-serial-connection": "~0.1.1"
   },
   "scripts": {
-    "example": "npm run compile && tsc example/poll-rpm.ts && node example/poll-rpm.js",
-    "example-fake": "npm run compile && tsc example/poll-fake.ts && node example/poll-fake.js",
-    "compile": "tsc lib/obd-interface.ts --declaration",
-    "prepublish": "npm run compile",
-    "linelint": "linelint $(find lib/ -name \"*.ts\" -not -name \"*.d.ts\")",
-    "test": "echo \"Tests needed...\" && npm run-script linelint"
+    "example": "node example/poll-rpm.js",
+    "example-fake": "node example/poll-fake.js"
   },
   "keywords": [
     "obd",
@@ -51,10 +32,10 @@
   "license": "GPL-3.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/evanshortiss/obd-parser.git"
+    "url": "https://github.com/dominicrico/node-obd.git"
   },
   "bugs": {
-    "url": "https://github.com/evanshortiss/obd-parser/issues"
+    "url": "https://github.com/dominicrico/node-obd/issues"
   },
-  "homepage": "https://github.com/evanshortiss/obd-parser"
+  "homepage": "https://github.com/dominicrico/node-obd"
 }
